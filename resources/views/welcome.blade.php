@@ -23,7 +23,7 @@
         <div id="particles-js" class="absolute w-full h-full"></div>
         <nav
             :class="[
-                isFixed ? 'max-w-screen-xl mx-auto fixed top-0 w-full z-50 bg-white py-2' : 'relative'
+                isFixed ? 'max-w-screen-xl mx-auto fixed top-0 w-full z-50 bg-white py-2' : 'relative top-0'
             ]">
             <div class="flex items-center justify-between px-4 transition-all duration-300 ease-in-out sm:px-6">
                 <x-application-logo class="h-[60px] z-30" />
@@ -37,39 +37,39 @@
                     </div>
                     <div
                         class="px-4 py-1 transition duration-150 ease-out hover:border-b-4 hover:border-web3nexus hover:ease-in">
-                        <a href="/" class="font-semibold"
+                        <button type="button" @click="scrollToSection('about-us')" class="font-semibold"
                             :class="[
                                 isFixed ? 'text-black' : 'text-white'
                             ]">About
-                            Us</a>
+                            Us</button>
                     </div>
                     <div class="px-4 py-1 hover:border-b-4 hover:border-web3nexus">
-                        <a href="/" class="font-semibold"
+                        <button type="button" @click="scrollToSection('our-services')" class="font-semibold"
                             :class="[
                                 isFixed ? 'text-black' : 'text-white'
-                            ]">Services</a>
+                            ]">Services</button>
                     </div>
                     <div class="px-4 py-1 hover:border-b-4 hover:border-web3nexus">
-                        <a href="/" class="font-semibold"
+                        <button type="button" @click="scrollToSection('why-choose-us')" class="font-semibold"
                             :class="[
                                 isFixed ? 'text-black' : 'text-white'
                             ]">Why
                             Choose
-                            Us?</a>
+                            Us?</button>
                     </div>
                     <div class="px-4 py-1 hover:border-b-4 hover:border-web3nexus">
-                        <a href="/" class="font-semibold"
+                        <button type="button" @click="scrollToSection('our-portfolio')" class="font-semibold"
                             :class="[
                                 isFixed ? 'text-black' : 'text-white'
-                            ]">Portfolio</a>
+                            ]">Portfolio</button>
                     </div>
                     <div class="px-4 py-1 hover:border-b-4 hover:border-web3nexus">
-                        <a href="/" class="font-semibold"
+                        <button type="button" @click="scrollToSection('faqs')" class="font-semibold"
                             :class="[
                                 isFixed ? 'text-black' : 'text-white'
-                            ]">FAQs</a>
+                            ]">FAQs</button>
                     </div>
-                    <x-button href="#" class="ml-3">Get a quote</x-button>
+                    <x-button @click="scrollToSection('reach-out')" class="ml-3">Get a quote</x-button>
                 </div>
                 {{-- Mobile Menu --}}
                 {{-- Hamburger --}}
@@ -80,19 +80,19 @@
                             <div class="h-[2px] w-7 transform transition-all duration-300 origin-left"
                                 :class="[
                                     isFixed ? 'bg-black' : 'bg-white',
-                                    dropdownMenu ? 'group-focus:rotate-[42deg]' : ''
+                                    dropdownMenu ? 'rotate-[42deg]' : ''
                                 ]">
                             </div>
                             <div class="h-[2px] w-1/2 rounded ml-auto transform transition-all duration-300"
                                 :class="[
                                     isFixed ? 'bg-black' : 'bg-white',
-                                    dropdownMenu ? 'group-focus:-translate-x-10' : ''
+                                    dropdownMenu ? '-translate-x-10' : ''
                                 ]">
                             </div>
                             <div class="h-[2px] w-7 transform transition-all duration-300 origin-left"
                                 :class="[
                                     isFixed ? 'bg-black' : 'bg-white',
-                                    dropdownMenu ? 'group-focus:-rotate-[42deg]' : ''
+                                    dropdownMenu ? '-rotate-[42deg]' : ''
                                 ]">
                             </div>
                         </div>
@@ -102,30 +102,33 @@
             {{-- Dropdown --}}
             <div @click.away="dropdownMenu = !dropdownMenu"
                 :class="[
-                    isFixed ? 'absolute z-50 w-full top-full' : 'absolute z-50 w-full top-full py-2'
+                    isFixed ? 'absolute z-50 w-full top-full md:hidden' : 'absolute z-50 w-full top-full py-2 md:hidden'
                 ]"
                 x-show.transition="dropdownMenu" x-transition:enter="transition ease-out duration-300 transform"
                 x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
                 x-transition:leave="transition ease-in duration-300 transform" x-transition:leave-start="translate-x-0"
-                x-transition:leave-end="-translate-x-full" @click.self="dropdownMenu = !dropdownMenu" x-clock>
+                x-transition:leave-end="-translate-x-full" @click.self="dropdownMenu = !dropdownMenu" x-cloak>
                 <div class="bg-white">
                     <div class="px-4 py-2 border-b sm:px-6">
-                        <a href="#" class="block">Home</a>
+                        <a href="/" class="block">Home</a>
                     </div>
-                    <div class="px-4 py-2 border-b sm:px-6">
-                        <a href="#" class="block">About us</a>
+                    <div class="px-4 py-2 text-left border-b sm:px-6">
+                        <button type="button" @click="scrollToSection('about-us')" class="block w-full text-left">About us</button>
                     </div>
-                    <div class="px-4 py-2 border-b sm:px-6">
-                        <a href="#" class="block">Services</a>
+                    <div class="px-4 py-2 text-left border-b sm:px-6">
+                        <button type="button" @click="scrollToSection('our-services')" class="block w-full text-left">Services</button>
                     </div>
-                    <div class="px-4 py-2 border-b sm:px-6">
-                        <a href="#" class="block">Why Choose Us?</a>
+                    <div class="px-4 py-2 text-left border-b sm:px-6">
+                        <button type="button" @click="scrollToSection('why-choose-us')" class="block w-full text-left">Why Choose Us?</button>
                     </div>
-                    <div class="px-4 py-2 border-b sm:px-6">
-                        <a href="#" class="block">Portfolio</a>
+                    <div class="px-4 py-2 text-left border-b sm:px-6">
+                        <button type="button" @click="scrollToSection('our-portfolio')" class="block w-full text-left">Portfolio</button>
                     </div>
-                    <div class="px-4 py-2 sm:px-6">
-                        <a href="#" class="block">FAQs</a>
+                    <div class="px-4 py-2 text-left border-b sm:px-6">
+                        <button type="button" @click="scrollToSection('faqs')" class="block w-full text-left">FAQs</button>
+                    </div>
+                    <div class="px-4 py-2 text-left sm:px-6">
+                        <button type="button" @click="scrollToSection('reach-out')" class="block w-full text-left">Get a quote</button>
                     </div>
                 </div>
             </div>
@@ -137,7 +140,7 @@
                 <h1 class="max-w-xl text-5xl italic font-bold"><span id="type">We Provide Cutting Edge</span></h1>
                 <h2 class="mt-2 text-4xl italic font-bold text-web3nexus">Web Solutions</h2>
                 <p class="text-sm font-semibold">For excellent brand like yours</p>
-                <x-button href="#" class="mt-10 mb-3 text-sm lg:text-base">Get a free consultation</x-button>
+                <x-button href="#" class="mt-10 mb-3 ml-0 text-sm lg:text-base">Get a free consultation</x-button>
             </div>
             <div class="z-30 hidden lg:block">
                 <img src="{{ Vite::asset('resources/images/hero-image.png') }}" alt="Hero" class="h-[400px]">
@@ -443,19 +446,19 @@
         </div>
     </section>
 
-    {{-- Our Porfolio --}}
-    <section class="mt-12" id="our-porfolio">
+    {{-- Our Portfolio --}}
+    <section class="mt-12" id="our-portfolio">
         <h3 class="text-3xl font-bold leading-none text-center">
             Our
             <span
                 class="relative inline-block before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-web3nexus">
-                <span class="relative text-white">Porfolio</span>
+                <span class="relative text-white">Portfolio</span>
             </span>
         </h3>
         <div class="grid gap-4 px-5 mt-8 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {{-- Portfolio item 1 --}}
             <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
                 <div class="flex items-center justify-between mt-3">
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
@@ -473,7 +476,7 @@
             </div>
             {{-- Portfolio item 2 --}}
             <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
                 <div class="flex items-center justify-between mt-3">
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
@@ -491,7 +494,7 @@
             </div>
             {{-- Portfolio item 3 --}}
             <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
                 <div class="flex items-center justify-between mt-3">
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
@@ -509,7 +512,7 @@
             </div>
             {{-- Portfolio item 4 --}}
             <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
                 <div class="flex items-center justify-between mt-3">
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
@@ -527,7 +530,7 @@
             </div>
             {{-- Portfolio item 5 --}}
             <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
                 <div class="flex items-center justify-between mt-3">
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
@@ -545,7 +548,7 @@
             </div>
             {{-- Portfolio item 6 --}}
             <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
                 <div class="flex items-center justify-between mt-3">
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
@@ -581,6 +584,13 @@
             <div class="mt-3">
                 <label for="email" class="font-semibold">Email</label>
                 <input type="email" name="email" id="email" class="block w-full mt-2 bg-gray-100 border-none drop-shadow" placeholder="Your email goes here...">
+            </div>
+            <div class="mt-3">
+                <label for="purpose" class="font-semibold">Purpose</label>
+                <select name="purpose" id="purpose" class="block w-full mt-2 bg-gray-100 border-none drop-shadow">
+                    <option value="">Select form purpose.</option>
+                    <option value="consultation">Consultation</option>
+                </select>
             </div>
             <div class="mt-3">
                 <label for="message" class="font-semibold">Message</label>
@@ -737,6 +747,20 @@
         </div>
         <p class="z-20 font-semibold">&copy; 2023 <a href="/">Web3Nexus</a>. All right reserved</p>
     </footer>
+    <script>
+        function scrollToSection(sectionId) {
+            var targetSection = document.getElementById(sectionId);
+
+            var menuHeight = 100;
+
+            var targetScrollPosition = targetSection.offsetTop - menuHeight;
+
+            window.scrollTo({
+                top: targetScrollPosition,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 
 </html>
