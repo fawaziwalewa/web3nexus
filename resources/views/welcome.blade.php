@@ -440,6 +440,103 @@
             </div>
         </div>
     </section>
+
+    {{-- Our Porfolio --}}
+    <section class="mt-12" id="our-porfolio">
+        <h3 class="text-3xl font-bold leading-none text-center">
+           Our
+            <span
+                class="relative inline-block before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-web3nexus">
+                <span class="relative text-white">Porfolio</span>
+            </span>
+        </h3>
+        <div class="grid gap-4 px-5 mt-8 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {{-- Portfolio item 1 --}}
+            <div class="p-4 bg-white drop-shadow-xl">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-semibold underline">Portfolio item</p>
+                    <div class="bg-web3nexus rounded-full p-[2px]">
+                        <div class="border border-white rounded-full">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Portfolio item 2 --}}
+            <div class="p-4 bg-white drop-shadow-xl">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-semibold underline">Portfolio item</p>
+                    <div class="bg-web3nexus rounded-full p-[2px]">
+                        <div class="border border-white rounded-full">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Portfolio item 3 --}}
+            <div class="p-4 bg-white drop-shadow-xl">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-semibold underline">Portfolio item</p>
+                    <div class="bg-web3nexus rounded-full p-[2px]">
+                        <div class="border border-white rounded-full">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Portfolio item 4 --}}
+            <div class="p-4 bg-white drop-shadow-xl">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-semibold underline">Portfolio item</p>
+                    <div class="bg-web3nexus rounded-full p-[2px]">
+                        <div class="border border-white rounded-full">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Portfolio item 5 --}}
+            <div class="p-4 bg-white drop-shadow-xl">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-semibold underline">Portfolio item</p>
+                    <div class="bg-web3nexus rounded-full p-[2px]">
+                        <div class="border border-white rounded-full">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Portfolio item 6 --}}
+            <div class="p-4 bg-white drop-shadow-xl">
+                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Porfolio">
+                <div class="flex items-center justify-between mt-3">
+                    <p class="font-semibold underline">Portfolio item</p>
+                    <div class="bg-web3nexus rounded-full p-[2px]">
+                        <div class="border border-white rounded-full">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
