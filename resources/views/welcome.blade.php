@@ -425,6 +425,20 @@
                 <x-button class="ml-0">get a free consultation</x-button>
             </div>
         </div>
+        {{-- Client-Centric Approach --}}
+        <div class="grid flex-row-reverse gap-5 px-5 mt-8 md:flex">
+            <div class="md:w-1/2">
+                <img class="rounded-xl h-[300px] w-full shadow object-cover" src="{{ Vite::asset('resources/images/wcu-fourth.jpg') }}"
+                    alt="Unparalleled Expertise">
+            </div>
+            <div class="flex flex-col justify-between gap-3 md:w-1/2">
+                <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Client-Centric Approach</h3>
+                <h5 class="font-bold">Your Success, Our Priority</h5>
+                <p>Your success is our ultimate goal. We prioritize open communication, transparency, and collaboration throughout the project lifecycle.</p>
+                <p>Our client-centric approach ensures that your voice is heard, your vision is realized, and your project is delivered on time and within budget. Your satisfaction is our measure of success.</p>
+                <x-button class="ml-0">get a free consultation</x-button>
+            </div>
+        </div>
     </section>
 </body>
 
