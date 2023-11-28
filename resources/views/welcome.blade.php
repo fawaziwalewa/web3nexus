@@ -155,7 +155,7 @@
             </span>
         </h3>
         <div class="grid gap-5 px-5 mt-8 lg:grid-cols-2 md:gap-10">
-            <div class="z-20 border-[13px] rounded-3xl border-web3nexus relative overflow-clip">
+            <div class="border-[13px] rounded-3xl shadow border-web3nexus relative overflow-clip">
                 <img class="w-full h-full" src="{{ Vite::asset('resources/images/about-us.jpg') }}" alt="About us">
             </div>
             <div class="flex flex-col items-start justify-between gap-4">
@@ -363,6 +363,66 @@
                 <h3 class="text-2xl font-bold">Sales & Marketing</h3>
                 <p class="font-semibold">This refers to the process of creating software applications (apps) that run
                     on various platforms, such as mobile devices, desktop computers, or the web.</p>
+            </div>
+        </div>
+    </section>
+
+    {{-- Why choose us? --}}
+    <section class="mt-12" id="why-choose-us">
+        <h3 class="text-3xl font-bold leading-none text-center">
+            Why
+            <span
+                class="relative inline-block before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-web3nexus">
+                <span class="relative text-white">Choose</span>
+            </span>
+            Us?
+        </h3>
+        {{-- Unparalleled Expertise --}}
+        <div class="grid gap-5 px-5 mt-8 md:grid-cols-2">
+            <div>
+                <img class="rounded-xl h-[350px] w-full shadow" src="{{ Vite::asset('resources/images/wcu-first.jpg') }}"
+                    alt="Unparalleled Expertise">
+            </div>
+            <div class="flex flex-col justify-between gap-3">
+                <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Unparalleled Expertise</h3>
+                <h5 class="font-bold">Your Vision, Our Expertise</h5>
+                <p>At Web3Nexus, we bring years of industry experience and technical know-how to the table. Our team of
+                    skilled professionals is well-versed in the latest web technologies and design trends.</p>
+                <p>Whether you're looking to create a stunning website, optimize your online presence, or explore the
+                    possibilities of web3 technologies, our expertise is your advantage.</p>
+                <x-button class="ml-0">get a free consultation</x-button>
+            </div>
+        </div>
+        {{-- Tailored Solutions --}}
+        <div class="grid flex-row-reverse gap-5 px-5 mt-8 md:flex">
+            <div class="md:w-1/2">
+                <img class="rounded-xl h-[300px] w-full shadow object-cover" src="{{ Vite::asset('resources/images/wcu-second.jpg') }}"
+                    alt="Unparalleled Expertise">
+            </div>
+            <div class="flex flex-col justify-between gap-3 md:w-1/2">
+                <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Tailored Solutions</h3>
+                <h5 class="font-bold">Your Needs, Our Solutions</h5>
+                <p>We understand that one size doesn't fit all. That's why we take a personalized approach to every
+                    project. Our solutions are tailored to your specific goals and requirements.</p>
+                <p>From custom web development to strategic digital marketing, we craft solutions that resonate with
+                    your audience and drive results.</p>
+                <x-button class="ml-0">get a free consultation</x-button>
+            </div>
+        </div>
+        {{-- Creative Innovation --}}
+        <div class="grid gap-5 px-5 mt-8 md:grid-cols-2">
+            <div>
+                <img class="rounded-xl h-[300px] w-full shadow object-cover"
+                    src="{{ Vite::asset('resources/images/wcu-third.jpg') }}" alt="Unparalleled Expertise">
+            </div>
+            <div class="flex flex-col justify-between gap-3">
+                <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Creative Innovation</h3>
+                <h5 class="font-bold">Your Imagination, Our Innovation</h5>
+                <p>Innovation is at the heart of everything we do. We thrive on pushing boundaries and exploring new
+                    horizons in web design and development.</p>
+                <p> Our creative team combines cutting-edge design with innovative technology to deliver captivating,
+                    user-friendly, and future-ready digital experiences.</p>
+                <x-button class="ml-0">get a free consultation</x-button>
             </div>
         </div>
     </section>
