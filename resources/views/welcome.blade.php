@@ -380,8 +380,8 @@
         {{-- Unparalleled Expertise --}}
         <div class="grid gap-5 px-5 mt-8 md:grid-cols-2">
             <div>
-                <img class="rounded-xl h-[350px] w-full shadow" src="{{ Vite::asset('resources/images/wcu-first.jpg') }}"
-                    alt="Unparalleled Expertise">
+                <img class="rounded-xl h-[350px] w-full shadow"
+                    src="{{ Vite::asset('resources/images/wcu-first.jpg') }}" alt="Unparalleled Expertise">
             </div>
             <div class="flex flex-col justify-between gap-3">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Unparalleled Expertise</h3>
@@ -396,8 +396,8 @@
         {{-- Tailored Solutions --}}
         <div class="grid flex-row-reverse gap-5 px-5 mt-8 md:flex">
             <div class="md:w-1/2">
-                <img class="rounded-xl h-[300px] w-full shadow object-cover" src="{{ Vite::asset('resources/images/wcu-second.jpg') }}"
-                    alt="Tailored Solutions">
+                <img class="rounded-xl h-[300px] w-full shadow object-cover"
+                    src="{{ Vite::asset('resources/images/wcu-second.jpg') }}" alt="Tailored Solutions">
             </div>
             <div class="flex flex-col justify-between gap-3 md:w-1/2">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Tailored Solutions</h3>
@@ -428,14 +428,16 @@
         {{-- Client-Centric Approach --}}
         <div class="grid flex-row-reverse gap-5 px-5 mt-8 md:flex">
             <div class="md:w-1/2">
-                <img class="rounded-xl h-[300px] w-full shadow object-cover" src="{{ Vite::asset('resources/images/wcu-fourth.jpg') }}"
-                    alt="Client-Centric Approach">
+                <img class="rounded-xl h-[300px] w-full shadow object-cover"
+                    src="{{ Vite::asset('resources/images/wcu-fourth.jpg') }}" alt="Client-Centric Approach">
             </div>
             <div class="flex flex-col justify-between gap-3 md:w-1/2">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Client-Centric Approach</h3>
                 <h5 class="font-bold">Your Success, Our Priority</h5>
-                <p>Your success is our ultimate goal. We prioritize open communication, transparency, and collaboration throughout the project lifecycle.</p>
-                <p>Our client-centric approach ensures that your voice is heard, your vision is realized, and your project is delivered on time and within budget. Your satisfaction is our measure of success.</p>
+                <p>Your success is our ultimate goal. We prioritize open communication, transparency, and collaboration
+                    throughout the project lifecycle.</p>
+                <p>Our client-centric approach ensures that your voice is heard, your vision is realized, and your
+                    project is delivered on time and within budget. Your satisfaction is our measure of success.</p>
                 <x-button class="ml-0">get a free consultation</x-button>
             </div>
         </div>
@@ -444,7 +446,7 @@
     {{-- Our Porfolio --}}
     <section class="mt-12" id="our-porfolio">
         <h3 class="text-3xl font-bold leading-none text-center">
-           Our
+            Our
             <span
                 class="relative inline-block before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-web3nexus">
                 <span class="relative text-white">Porfolio</span>
@@ -458,8 +460,12 @@
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
                         <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
+                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
@@ -472,8 +478,12 @@
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
                         <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
+                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
@@ -486,8 +496,12 @@
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
                         <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
+                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
@@ -500,8 +514,12 @@
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
                         <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
+                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
@@ -514,8 +532,12 @@
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
                         <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
+                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
@@ -528,14 +550,46 @@
                     <p class="font-semibold underline">Portfolio item</p>
                     <div class="bg-web3nexus rounded-full p-[2px]">
                         <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483" stroke="white" stroke-width="1.97368" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
+                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    {{-- Reach Out --}}
+    <section class="mt-12" id="reach-out">
+        <h3 class="text-3xl font-bold leading-none text-center">
+            Reach
+            <span
+                class="relative inline-block before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-web3nexus">
+                <span class="relative text-white">Out</span>
+            </span>
+        </h3>
+        <form method="POST" action="#" class="w-full max-w-xl mx-auto mt-8">
+            <div class="">
+                <label for="name" class="font-semibold">Name</label>
+                <input type="text" name="name" id="name" class="block w-full mt-2 bg-gray-100 border-none drop-shadow" placeholder="Your name goes here...">
+            </div>
+            <div class="mt-3">
+                <label for="email" class="font-semibold">Email</label>
+                <input type="email" name="email" id="email" class="block w-full mt-2 bg-gray-100 border-none drop-shadow" placeholder="Your email goes here...">
+            </div>
+            <div class="mt-3">
+                <label for="message" class="font-semibold">Message</label>
+                <textarea name="message" id="message" cols="30" rows="5" class="block w-full mt-2 bg-gray-100 border-none drop-shadow" placeholder="Your message goes here..."></textarea>
+            </div>
+            <div class="flex justify-center mt-3">
+                <x-button>get a free consultation</x-button>
+            </div>
+        </form>
     </section>
 </body>
 
