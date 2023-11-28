@@ -397,7 +397,7 @@
         <div class="grid flex-row-reverse gap-5 px-5 mt-8 md:flex">
             <div class="md:w-1/2">
                 <img class="rounded-xl h-[300px] w-full shadow object-cover" src="{{ Vite::asset('resources/images/wcu-second.jpg') }}"
-                    alt="Unparalleled Expertise">
+                    alt="Tailored Solutions">
             </div>
             <div class="flex flex-col justify-between gap-3 md:w-1/2">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Tailored Solutions</h3>
@@ -413,7 +413,7 @@
         <div class="grid gap-5 px-5 mt-8 md:grid-cols-2">
             <div>
                 <img class="rounded-xl h-[300px] w-full shadow object-cover"
-                    src="{{ Vite::asset('resources/images/wcu-third.jpg') }}" alt="Unparalleled Expertise">
+                    src="{{ Vite::asset('resources/images/wcu-third.jpg') }}" alt="Creative Innovation">
             </div>
             <div class="flex flex-col justify-between gap-3">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Creative Innovation</h3>
@@ -429,7 +429,7 @@
         <div class="grid flex-row-reverse gap-5 px-5 mt-8 md:flex">
             <div class="md:w-1/2">
                 <img class="rounded-xl h-[300px] w-full shadow object-cover" src="{{ Vite::asset('resources/images/wcu-fourth.jpg') }}"
-                    alt="Unparalleled Expertise">
+                    alt="Client-Centric Approach">
             </div>
             <div class="flex flex-col justify-between gap-3 md:w-1/2">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Client-Centric Approach</h3>
