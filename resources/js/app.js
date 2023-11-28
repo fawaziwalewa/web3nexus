@@ -14,6 +14,7 @@ import.meta.glob(['../images/**', '../fonts/**',]);
 
 $(document).ready(function () {
     particlesJS.load('particles-js', '/js/particles.json', function() {});
+    particlesJS.load('particles-js-f', '/js/particles.json', function() {});
 
     const ce = new Typed('#type', {
         strings: ['We Provide Cutting Edge', 'We Provide User Friendly', 'We Empower Businesses with Stunning'],
