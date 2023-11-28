@@ -144,6 +144,32 @@
             </div>
         </div>
     </header>
+
+    {{-- About Us --}}
+    <div class="mt-12" id="about-us">
+        <h3 class="text-3xl font-bold leading-none text-center">
+            About
+            <span
+                class="relative inline-block before:block before:absolute before:-inset-1 before:-skew-y-12 before:bg-web3nexus">
+                <span class="relative text-white">Us</span>
+            </span>
+        </h3>
+        <div class="grid gap-5 px-5 mt-8 lg:grid-cols-2 md:gap-10">
+            <div class="z-20 border-[13px] rounded-3xl border-web3nexus relative overflow-clip">
+                <img class="w-full h-full" src="{{ Vite::asset('resources/images/about-us.jpg') }}" alt="About us">
+            </div>
+            <div class="flex flex-col items-start justify-between gap-4">
+                <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Crafting Digital Excellence, One Pixel at a Time</h3>
+                <p class="font-semibold">
+                    Welcome to Web3Nexus:  Where Creative Innovation Merges Seamlessly with Cutting-Edge Technology to Revolutionize Your Online Presence
+                </p>
+                <p class="font-semibold">
+                    At Web3Nexus, your ultimate gateway to the boundless possibilities of the digital universe, we are a dynamic web development agency driven by an unwavering commitment to craft bespoke digital solutions that transcend conventional boundaries. Here, we don't just navigate the web; we meticulously shape it, harnessing the power of creativity and technology to breathe new life into your online identity.
+                </p>
+                <x-button class="ml-0">Learn More</x-button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
