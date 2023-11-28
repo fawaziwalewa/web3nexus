@@ -146,7 +146,7 @@
     </header>
 
     {{-- About Us --}}
-    <div class="mt-12" id="about-us">
+    <section class="mt-12" id="about-us">
         <h3 class="text-3xl font-bold leading-none text-center">
             About
             <span
@@ -174,10 +174,10 @@
                 <x-button class="ml-0">Learn More</x-button>
             </div>
         </div>
-    </div>
+    </section>
 
     {{-- Our Services --}}
-    <div class="px-5 mt-12" id="our-services">
+    <section class="px-5 mt-12" id="our-services">
         <h3 class="text-3xl font-bold leading-none text-center">
             Our
             <span
@@ -365,7 +365,7 @@
                     on various platforms, such as mobile devices, desktop computers, or the web.</p>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
