@@ -573,7 +573,7 @@
                 <span class="relative text-white">Out</span>
             </span>
         </h3>
-        <form method="POST" action="#" class="w-full max-w-xl mx-auto mt-8">
+        <form method="POST" action="#" class="w-full max-w-xl px-5 mx-auto mt-8">
             <div class="">
                 <label for="name" class="font-semibold">Name</label>
                 <input type="text" name="name" id="name" class="block w-full mt-2 bg-gray-100 border-none drop-shadow" placeholder="Your name goes here...">
@@ -590,6 +590,39 @@
                 <x-button>get a free consultation</x-button>
             </div>
         </form>
+    </section>
+
+    {{-- Frequently Asked Questions --}}
+    <section class="mt-12" id="faqs">
+        <h3 class="text-3xl font-bold leading-none text-center">
+            Frequently
+            <span
+                class="relative inline-block before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-web3nexus">
+                <span class="relative text-white">Asked</span>
+            </span>
+            Questions
+        </h3>
+        <div class="w-full max-w-2xl mx-auto mt-8" x-data="{ selected: 1 }">
+            {{-- Faqs item --}}
+            @for ($i = 1; $i < 6; $i++)
+                <div class="px-5 py-2 @if ($i != 5) border-b border-web3nexus @endif">
+                    {{-- Question --}}
+                    <div class="flex items-center justify-between text-web3nexus" @click="selected !== {{ $i }} ? selected = {{ $i }} : selected = null">
+                        <h4 class="text-xl font-semibold">Question {{ $i }}</h4>
+                        {{-- active --}}
+                        <svg x-show="selected !== {{ $i }} ? true : false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                        </svg>
+                        {{-- inactive --}}
+                        <svg x-show="selected !== {{ $i }} ? false : true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M5.25 12a.75.75 0 01.75-.75h12a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    {{-- Answer --}}
+                    <p class="mt-2 text-gray-500" x-show="selected !== {{ $i }} ? false : true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus odit libero ipsum illum quisquam fuga magnam quia veniam cupiditate corporis, dolore doloremque alias quod rerum, facere eaque. Voluptatem incidunt corporis quia officia architecto tempora nihil cum repellendus, iusto quis, maiores nam inventore ab. Sequi nisi nulla sed hic, commodi nobis.</p>
+                </div>
+            @endfor
+        </div>
     </section>
 </body>
 
