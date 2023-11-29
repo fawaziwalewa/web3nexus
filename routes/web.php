@@ -2,6 +2,7 @@
 
 use App\Models\FAQ;
 use App\Models\Portfolio;
+use App\Models\SocialLink;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
@@ -21,7 +22,9 @@ Route::get('/', function () {
 
     $portfolios = Portfolio::where('status', 1)->get();
 
-    return view('welcome', compact('faqs', 'portfolios'));
+    $social_links = SocialLink::where('status', 1)->get();
+
+    return view('welcome', compact('faqs', 'portfolios', 'social_links'));
 });
 
 Route::get('/dashboard', function () {
