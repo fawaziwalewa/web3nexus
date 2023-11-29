@@ -15,6 +15,8 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @filamentStyles
 </head>
 
 <body class="max-w-screen-xl mx-auto font-sans antialiased text-gray-900">
@@ -69,7 +71,7 @@
                                 isFixed ? 'text-black' : 'text-white'
                             ]">FAQs</button>
                     </div>
-                    <x-button @click="scrollToSection('reach-out')" class="ml-3">Get a quote</x-button>
+                    <x-button type="button" @click="scrollToSection('reach-out')" class="ml-3">Get a quote</x-button>
                 </div>
                 {{-- Mobile Menu --}}
                 {{-- Hamburger --}}
@@ -146,7 +148,7 @@
                 <h1 class="max-w-xl text-5xl italic font-bold"><span id="type">We Provide Cutting Edge</span></h1>
                 <h2 class="mt-2 text-4xl italic font-bold text-web3nexus">Web Solutions</h2>
                 <p class="text-sm font-semibold">For excellent brand like yours</p>
-                <x-button href="#" class="mt-10 mb-3 ml-0 text-sm lg:text-base">Get a free consultation</x-button>
+                <x-button type="button" class="mt-10 mb-3 ml-0 text-sm lg:text-base">Get a free consultation</x-button>
             </div>
             <div class="z-30 hidden lg:block">
                 <img src="{{ Vite::asset('resources/images/hero-image.png') }}" alt="Hero" class="h-[400px]">
@@ -180,7 +182,7 @@
                     that transcend conventional boundaries. Here, we don't just navigate the web; we meticulously shape
                     it, harnessing the power of creativity and technology to breathe new life into your online identity.
                 </p>
-                <x-button class="ml-0">Learn More</x-button>
+                <x-button type="button" class="ml-0">Learn More</x-button>
             </div>
         </div>
     </section>
@@ -399,7 +401,7 @@
                     skilled professionals is well-versed in the latest web technologies and design trends.</p>
                 <p>Whether you're looking to create a stunning website, optimize your online presence, or explore the
                     possibilities of web3 technologies, our expertise is your advantage.</p>
-                <x-button class="ml-0">get a free consultation</x-button>
+                <x-button type="button" class="ml-0">get a free consultation</x-button>
             </div>
         </div>
         {{-- Tailored Solutions --}}
@@ -431,7 +433,7 @@
                     horizons in web design and development.</p>
                 <p> Our creative team combines cutting-edge design with innovative technology to deliver captivating,
                     user-friendly, and future-ready digital experiences.</p>
-                <x-button class="ml-0">get a free consultation</x-button>
+                <x-button type="button" class="ml-0">get a free consultation</x-button>
             </div>
         </div>
         {{-- Client-Centric Approach --}}
@@ -447,7 +449,7 @@
                     throughout the project lifecycle.</p>
                 <p>Our client-centric approach ensures that your voice is heard, your vision is realized, and your
                     project is delivered on time and within budget. Your satisfaction is our measure of success.</p>
-                <x-button class="ml-0">get a free consultation</x-button>
+                <x-button type="button" class="ml-0">get a free consultation</x-button>
             </div>
         </div>
     </section>
@@ -582,35 +584,7 @@
                 <span class="relative text-white">Out</span>
             </span>
         </h3>
-        <form method="POST" action="#" class="w-full max-w-xl px-5 mx-auto mt-8">
-            <div class="">
-                <label for="name" class="font-semibold">Name</label>
-                <input type="text" name="name" id="name"
-                    class="block w-full mt-2 bg-gray-100 border-none drop-shadow"
-                    placeholder="Your name goes here...">
-            </div>
-            <div class="mt-3">
-                <label for="email" class="font-semibold">Email</label>
-                <input type="email" name="email" id="email"
-                    class="block w-full mt-2 bg-gray-100 border-none drop-shadow"
-                    placeholder="Your email goes here...">
-            </div>
-            <div class="mt-3">
-                <label for="purpose" class="font-semibold">Purpose</label>
-                <select name="purpose" id="purpose" class="block w-full mt-2 bg-gray-100 border-none drop-shadow">
-                    <option value="">Select form purpose.</option>
-                    <option value="consultation">Consultation</option>
-                </select>
-            </div>
-            <div class="mt-3">
-                <label for="message" class="font-semibold">Message</label>
-                <textarea name="message" id="message" cols="30" rows="5"
-                    class="block w-full mt-2 bg-gray-100 border-none drop-shadow" placeholder="Your message goes here..."></textarea>
-            </div>
-            <div class="flex justify-center mt-3">
-                <x-button>get a free consultation</x-button>
-            </div>
-        </form>
+        @livewire('contact')
     </section>
 
     {{-- Frequently Asked Questions --}}
@@ -814,6 +788,8 @@
             });
         }
     </script>
+    @livewire('notifications')
+    @filamentScripts
 </body>
 
 </html>

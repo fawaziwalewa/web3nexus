@@ -1,4 +1,4 @@
-<a {{ $attributes->merge(['class' => 'bg-web3nexus rounded-full flex items-center w-max mx-auto sm:mx-0 cursor-pointer']) }}>
+<button {{ $attributes->merge(['class' => 'bg-web3nexus rounded-full flex items-center w-max mx-auto sm:mx-0 cursor-pointer']) }}>
     <p class="uppercase px-4 text-white font-semibold">{{ $slot }}</p>
     <div class="border-2 border-white rounded-full w-max p-1">
         <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center">
@@ -7,4 +7,4 @@
             </svg>
         </div>
     </div>
-</a>
+</button>
