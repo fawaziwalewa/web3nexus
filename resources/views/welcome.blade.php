@@ -535,10 +535,14 @@
                         </svg>
                     </div>
                     {{-- Answer --}}
-                    <p class="mt-2 text-gray-500" x-show="selected !== {{ $i }} ? false : true"
+                    <p class="mt-2 text-gray-500 prose" x-show="selected !== {{ $i }} ? false : true"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
-                        {{ $faq->answer }}</p>
+                        @php
+                            $html = \Illuminate\Support\Str::of($faq->answer)->markdown();
+                        @endphp
+                        {!! $html !!}
+                    </p>
                 </div>
             @endforeach
 
