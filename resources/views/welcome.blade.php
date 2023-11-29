@@ -115,27 +115,27 @@
                         <a href="/" class="block">Home</a>
                     </div>
                     <div class="px-4 py-2 text-left border-b sm:px-6">
-                        <button type="button" @click="scrollToSection('about-us')" class="block w-full text-left">About
+                        <button type="button" @click="scrollToSection('about-us'); dropdownMenu = false" class="block w-full text-left">About
                             us</button>
                     </div>
                     <div class="px-4 py-2 text-left border-b sm:px-6">
-                        <button type="button" @click="scrollToSection('our-services')"
+                        <button type="button" @click="scrollToSection('our-services'); dropdownMenu = false"
                             class="block w-full text-left">Services</button>
                     </div>
                     <div class="px-4 py-2 text-left border-b sm:px-6">
-                        <button type="button" @click="scrollToSection('why-choose-us')"
+                        <button type="button" @click="scrollToSection('why-choose-us'); dropdownMenu = false"
                             class="block w-full text-left">Why Choose Us?</button>
                     </div>
                     <div class="px-4 py-2 text-left border-b sm:px-6">
-                        <button type="button" @click="scrollToSection('our-portfolio')"
+                        <button type="button" @click="scrollToSection('our-portfolio'); dropdownMenu = false"
                             class="block w-full text-left">Portfolio</button>
                     </div>
                     <div class="px-4 py-2 text-left border-b sm:px-6">
-                        <button type="button" @click="scrollToSection('faqs')"
+                        <button type="button" @click="scrollToSection('faqs'); dropdownMenu = false"
                             class="block w-full text-left">FAQs</button>
                     </div>
                     <div class="px-4 py-2 text-left sm:px-6">
-                        <button type="button" @click="scrollToSection('reach-out')" class="block w-full text-left">Get
+                        <button type="button" @click="scrollToSection('reach-out'); dropdownMenu = false" class="block w-full text-left">Get
                             a quote</button>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                 <h1 class="max-w-xl text-5xl italic font-bold"><span id="type">We Provide Cutting Edge</span></h1>
                 <h2 class="mt-2 text-4xl italic font-bold text-web3nexus">Web Solutions</h2>
                 <p class="text-sm font-semibold">For excellent brand like yours</p>
-                <x-button type="button" class="mt-10 mb-3 ml-0 text-sm lg:text-base">Get a free consultation</x-button>
+                <x-button type="button" onclick="scrollToSection('reach-out')" class="mt-10 mb-3 ml-0 text-sm lg:text-base">Get a free consultation</x-button>
             </div>
             <div class="z-30 hidden lg:block">
                 <img src="{{ Vite::asset('resources/images/hero-image.png') }}" alt="Hero" class="h-[400px]">
@@ -401,7 +401,7 @@
                     skilled professionals is well-versed in the latest web technologies and design trends.</p>
                 <p>Whether you're looking to create a stunning website, optimize your online presence, or explore the
                     possibilities of web3 technologies, our expertise is your advantage.</p>
-                <x-button type="button" class="ml-0">get a free consultation</x-button>
+                <x-button type="button" onclick="scrollToSection('reach-out')" class="ml-0">get a free consultation</x-button>
             </div>
         </div>
         {{-- Tailored Solutions --}}
@@ -417,7 +417,7 @@
                     project. Our solutions are tailored to your specific goals and requirements.</p>
                 <p>From custom web development to strategic digital marketing, we craft solutions that resonate with
                     your audience and drive results.</p>
-                <x-button class="ml-0">get a free consultation</x-button>
+                <x-button type="button" onclick="scrollToSection('reach-out')" class="ml-0">get a free consultation</x-button>
             </div>
         </div>
         {{-- Creative Innovation --}}
@@ -433,7 +433,7 @@
                     horizons in web design and development.</p>
                 <p> Our creative team combines cutting-edge design with innovative technology to deliver captivating,
                     user-friendly, and future-ready digital experiences.</p>
-                <x-button type="button" class="ml-0">get a free consultation</x-button>
+                <x-button type="button" onclick="scrollToSection('reach-out')" class="ml-0">get a free consultation</x-button>
             </div>
         </div>
         {{-- Client-Centric Approach --}}
@@ -449,7 +449,7 @@
                     throughout the project lifecycle.</p>
                 <p>Our client-centric approach ensures that your voice is heard, your vision is realized, and your
                     project is delivered on time and within budget. Your satisfaction is our measure of success.</p>
-                <x-button type="button" class="ml-0">get a free consultation</x-button>
+                <x-button type="button" onclick="scrollToSection('reach-out')" class="ml-0">get a free consultation</x-button>
             </div>
         </div>
     </section>
@@ -464,115 +464,27 @@
             </span>
         </h3>
         <div class="grid gap-4 px-5 mt-8 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {{-- Portfolio item 1 --}}
-            <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
-                <div class="flex items-center justify-between mt-3">
-                    <p class="font-semibold underline">Portfolio item</p>
-                    <div class="bg-web3nexus rounded-full p-[2px]">
-                        <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
-                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+            @foreach ($portfolios as $portfolio)
+                {{-- Portfolio item --}}
+                <a href="{{ $portfolio->url }}" target="_black" rel="noopener" class="transition-all p-4 bg-white border-2 hover:border-black hover:bg-web3nexus group cursor-pointer drop-shadow-xl">
+                    <img class="object-cover w-full h-56 border-2 group-hover:border-black" src="{{ rtrim(env('APP_URL'), '/') . '/storage/' . $portfolio->image }}" alt="{{ $portfolio->title }} Portfolio">
+                    <div class="flex items-center justify-between mt-3">
+                        <p class="font-semibold underline group-hover:text-white">{{ $portfolio->title }}</p>
+                        <div class="bg-web3nexus group-hover:bg-white rounded-full p-[2px]">
+                            <div class="border border-white group-hover:border-web3nexus rounded-full p-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="text-white group-hover:text-web3nexus w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            {{-- Portfolio item 2 --}}
-            <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
-                <div class="flex items-center justify-between mt-3">
-                    <p class="font-semibold underline">Portfolio item</p>
-                    <div class="bg-web3nexus rounded-full p-[2px]">
-                        <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
-                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- Portfolio item 3 --}}
-            <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
-                <div class="flex items-center justify-between mt-3">
-                    <p class="font-semibold underline">Portfolio item</p>
-                    <div class="bg-web3nexus rounded-full p-[2px]">
-                        <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
-                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- Portfolio item 4 --}}
-            <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
-                <div class="flex items-center justify-between mt-3">
-                    <p class="font-semibold underline">Portfolio item</p>
-                    <div class="bg-web3nexus rounded-full p-[2px]">
-                        <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
-                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- Portfolio item 5 --}}
-            <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
-                <div class="flex items-center justify-between mt-3">
-                    <p class="font-semibold underline">Portfolio item</p>
-                    <div class="bg-web3nexus rounded-full p-[2px]">
-                        <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
-                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- Portfolio item 6 --}}
-            <div class="p-4 bg-white drop-shadow-xl">
-                <img class="object-cover w-full h-56" src="https://picsum.photos/500/500" alt="Portfolio">
-                <div class="flex items-center justify-between mt-3">
-                    <p class="font-semibold underline">Portfolio item</p>
-                    <div class="bg-web3nexus rounded-full p-[2px]">
-                        <div class="border border-white rounded-full">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.60767 17.2483L17.4761 7.37988M17.4761 7.37988H7.60767M17.4761 7.37988V17.2483"
-                                    stroke="white" stroke-width="1.97368" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </a>
+            @endforeach
         </div>
+
+        @if($portfolios->isEmpty())
+            <p class="text-2xl font-bold text-center text-gray-300 md:text-4xl">No items to display.</p>
+        @endif
     </section>
 
     {{-- Reach Out --}}
@@ -629,9 +541,10 @@
                         {{ $faq->answer }}</p>
                 </div>
             @endforeach
-            @empty($faqs)
+
+            @if($faqs->isEmpty())
                 <p class="text-2xl font-bold text-center text-gray-300 md:text-4xl">No items to display.</p>
-            @endempty
+            @endif
         </div>
     </section>
 

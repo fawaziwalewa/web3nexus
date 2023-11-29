@@ -38,6 +38,6 @@
         @error('message') <span class="text-pink-600 mt-1">{{ $message }}</span> @enderror
     </div>
     <div class="flex justify-center mt-3">
-        <x-button type="submit" wire:loading.class="opacity-50" wire:loading.attr="disabled" wire:target="save">get a free consultation</x-button>
+        <x-button type="submit" wire:loading.class="opacity-50" wire:loading.attr="disabled" wire:target="save">submit</x-button>
     </div>
 </form>

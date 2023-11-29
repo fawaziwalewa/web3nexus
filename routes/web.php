@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\FAQ;
+use App\Models\Portfolio;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
@@ -18,7 +19,9 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', function () {
     $faqs = FAQ::where('status', 1)->get();
 
-    return view('welcome', compact('faqs'));
+    $portfolios = Portfolio::where('status', 1)->get();
+
+    return view('welcome', compact('faqs', 'portfolios'));
 });
 
 Route::get('/dashboard', function () {
