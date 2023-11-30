@@ -568,7 +568,7 @@
 
     {{-- Footer --}}
     <footer class="relative flex flex-col items-center gap-3 py-5 mt-12 text-white bg-black" id="footer">
-        <div id="particles-js-f" class="absolute w-full h-full"></div>
+        <div id="particles-js-f" class="absolute inset-x-0 inset-y-0 w-full"></div>
         <div class="z-20 w-36">
             <x-application-logo />
         </div>
