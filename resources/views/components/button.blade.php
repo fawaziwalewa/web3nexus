@@ -1,9 +1,9 @@
-<button {{ $attributes->merge(['class' => 'bg-web3nexus rounded-full flex items-center w-max mx-auto sm:mx-0 cursor-pointer']) }}>
-    <p class="uppercase px-4 text-white font-semibold">{{ $slot }}</p>
-    <div class="border-2 border-white rounded-full w-max p-1">
-        <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center">
-            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.5 1.26074L19 8.76074M19 8.76074L11.5 16.2607M19 8.76074H1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<button {{ $attributes->merge(['class' => 'hover:scale-105 bg-web3nexus rounded-full flex items-center w-max mx-auto sm:mx-0 cursor-pointer']) }}>
+    <p class="px-4 text-sm font-semibold text-white uppercase">{{ $slot }}</p>
+    <div class="p-1 border-2 border-white rounded-full w-max">
+        <div class="flex items-center justify-center w-8 h-8 bg-white rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
         </div>
     </div>

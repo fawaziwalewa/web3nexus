@@ -19,9 +19,9 @@
     @filamentStyles
 </head>
 
-<body class="max-w-screen-xl mx-auto font-sans antialiased text-gray-900">
+<body class="relative max-w-screen-xl mx-auto font-sans antialiased text-gray-900">
     <header class="relative py-3 bg-black lg:py-6 min-h-[400px] md:min-h-[500px]" x-data="{ isFixed: false, dropdownMenu: false }"
-        @scroll.window="isFixed = window.scrollY > 60">
+        @scroll.window="isFixed = window.scrollY > 60" id="header">
         <div id="particles-js" class="absolute w-full h-full"></div>
         <nav
             :class="[
@@ -185,7 +185,8 @@
                     that transcend conventional boundaries. Here, we don't just navigate the web; we meticulously shape
                     it, harnessing the power of creativity and technology to breathe new life into your online identity.
                 </p>
-                <x-button type="button" class="">Learn More</x-button>
+                <x-button type="button" onclick="scrollToSection('reach-out')" class="">get a free
+                    consultation</x-button>
             </div>
         </div>
     </section>
@@ -474,17 +475,17 @@
             @foreach ($portfolios as $portfolio)
                 {{-- Portfolio item --}}
                 <a href="{{ $portfolio->url }}" target="_black" rel="noopener"
-                    class="transition-all p-4 bg-white border-2 hover:border-black hover:bg-web3nexus group cursor-pointer drop-shadow-xl">
+                    class="p-4 transition-all bg-white border-2 cursor-pointer hover:border-black hover:bg-web3nexus group drop-shadow-xl">
                     <img class="object-cover w-full h-56 border-2 group-hover:border-black"
                         src="{{ rtrim(env('APP_URL'), '/') . '/storage/' . $portfolio->image }}"
                         alt="{{ $portfolio->title }} Portfolio">
                     <div class="flex items-center justify-between mt-3">
                         <p class="font-semibold underline group-hover:text-white">{{ $portfolio->title }}</p>
                         <div class="bg-web3nexus group-hover:bg-white rounded-full p-[2px]">
-                            <div class="border border-white group-hover:border-web3nexus rounded-full p-1">
+                            <div class="p-1 border border-white rounded-full group-hover:border-web3nexus">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="2.5" stroke="currentColor"
-                                    class="text-white group-hover:text-web3nexus w-4 h-4">
+                                    class="w-4 h-4 text-white group-hover:text-web3nexus">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                                 </svg>
@@ -527,13 +528,13 @@
             @foreach ($faqs as $i => $faq)
                 <div class="px-5 py-2 @if (!$loop->last) border-b border-web3nexus @endif">
                     {{-- Question --}}
-                    <div class="flex items-center justify-between text-web3nexus cursor-pointer"
+                    <div class="flex items-center justify-between cursor-pointer text-web3nexus"
                         @click="selected !== {{ $i }} ? selected = {{ $i }} : selected = null">
                         <h4 class="text-xl font-semibold">{{ $faq->question }}</h4>
                         {{-- active --}}
                         <svg x-show="selected !== {{ $i }} ? true : false"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="min-w-min w-5 h-5">
+                            class="w-5 h-5 min-w-min">
                             <path fill-rule="evenodd"
                                 d="M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z"
                                 clip-rule="evenodd" />
@@ -541,7 +542,7 @@
                         {{-- inactive --}}
                         <svg x-show="selected !== {{ $i }} ? false : true"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="min-w-min w-5 h-5">
+                            class="w-5 h-5 min-w-min">
                             <path fill-rule="evenodd"
                                 d="M5.25 12a.75.75 0 01.75-.75h12a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z"
                                 clip-rule="evenodd" />
@@ -551,7 +552,7 @@
                         $html = \Illuminate\Support\Str::of($faq->answer)->markdown();
                     @endphp
                     {{-- Answer --}}
-                    <div class="mt-2 text-gray-500 prose" x-show="selected !== {{ $i }} ? false : true"
+                    <div class="mt-2 prose text-gray-500" x-show="selected !== {{ $i }} ? false : true"
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
                         {!! $html !!}
@@ -730,6 +731,16 @@
         <p class="z-20 font-semibold">&copy; 2023 <a href="/" class="hover:text-web3nexus">Web3Nexus</a>. All
             right reserved</p>
     </footer>
+
+    {{-- Back to top --}}
+    <a href="#header" id="backToTopBtn" class="fixed z-50 hidden p-1 border-2 rounded-full cursor-pointer bottom-3 right-3 border-web3nexus w-max">
+        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-web3nexus min-w-max">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 fill-white">
+                <path fill-rule="evenodd" d="M12 20.25a.75.75 0 01-.75-.75V6.31l-5.47 5.47a.75.75 0 01-1.06-1.06l6.75-6.75a.75.75 0 011.06 0l6.75 6.75a.75.75 0 11-1.06 1.06l-5.47-5.47V19.5a.75.75 0 01-.75.75z" clip-rule="evenodd" />
+            </svg>
+        </div>
+    </a>
+
     <script>
         function scrollToSection(sectionId) {
             var targetSection = document.getElementById(sectionId);
@@ -742,6 +753,25 @@
                 top: targetScrollPosition,
                 behavior: 'smooth'
             });
+        }
+
+        var mybutton = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
     @livewire('notifications')
