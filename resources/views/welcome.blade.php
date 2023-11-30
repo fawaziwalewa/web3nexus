@@ -151,7 +151,7 @@
                 <h2 class="mt-2 text-4xl italic font-bold text-web3nexus">Web Solutions</h2>
                 <p class="text-sm font-semibold">For excellent brand like yours</p>
                 <x-button type="button" onclick="scrollToSection('reach-out')"
-                    class="mt-10 mb-3 text-sm lg:text-base">Get a free consultation</x-button>
+                    class="mt-10 mb-3 text-sm text-black lg:text-base">Get a free consultation</x-button>
             </div>
             <div class="z-30 hidden lg:block">
                 <img src="{{ Vite::asset('resources/images/hero-image.png') }}" alt="Hero" class="h-[400px]">
