@@ -17,6 +17,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @filamentStyles
+
+    <link rel="shortcut icon" href="{{ Vite::asset('resources/images/favicon.png') }}" type="image/x-icon">
 </head>
 
 <body class="relative max-w-screen-xl mx-auto font-sans antialiased text-gray-900">
