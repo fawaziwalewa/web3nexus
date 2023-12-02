@@ -18,6 +18,35 @@
     @filamentStyles
 
     <link rel="shortcut icon" href="{{ Vite::asset('resources/images/favicon.webp') }}" type="image/x-icon">
+
+    <!-- Meta Description -->
+    <meta name="description" content="Elevate your online presence with Web3Nexus! Experts in web & app development for impactful digital experiences. Best web dev 2023">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="Web Development, Mobile App Design, Custom Websites, Responsive Web, Innovative Apps, UI/UX Design, E-commerce Dev, SEO-friendly, Web3Nexus, User-Centric, Cross-Platform, Digital Solutions, Professional Developers, Mobile App Strategy, Impactful Experiences">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Web3Nexus">
+    <meta name="twitter:description" content="Elevate your online presence with Web3Nexus! Experts in web & app development for impactful digital experiences. Best web dev 2023">
+    <meta name="twitter:image" content="{{ Vite::asset('resources/images/logo.png') }}">
+
+    <!-- Open Graph/Facebook Meta Tags -->
+    <meta property="og:title" content="Web3Nexus">
+    <meta property="og:description" content="Elevate your online presence with Web3Nexus! Experts in web & app development for impactful digital experiences. Best web dev 2023">
+    <meta property="og:image" content="{{ Vite::asset('resources/images/logo.png') }}">
+    <meta property="og:url" content="{{ config('app.name') }}">
+    <meta property="og:type" content="website">
+
+    <!-- WhatsApp Meta Tags -->
+    <meta property="og:site_name" content="Web3Nexus">
+    <meta property="og:title" content="Web3Nexus">
+    <meta property="og:description" content="Elevate your online presence with Web3Nexus! Experts in web & app development for impactful digital experiences. Best web dev 2023">
+    <meta property="og:image" content="{{ Vite::asset('resources/images/logo.png') }}">
+
+    <!-- Other Meta Tags (if needed) -->
+    <meta name="author" content="Web3Nexus">
+    <meta name="robots" content="index, follow">
 </head>
 
 <body class="relative mx-auto font-sans antialiased text-gray-900">
@@ -777,7 +806,7 @@
     </script>
     @livewire('notifications')
     @filamentScripts
-    <script async src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 
 </html>
