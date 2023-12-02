@@ -11,14 +11,13 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @filamentStyles
 
-    <link rel="shortcut icon" href="{{ Vite::asset('resources/images/favicon.jpg') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ Vite::asset('resources/images/favicon.webp') }}" type="image/x-icon">
 </head>
 
 <body class="relative mx-auto font-sans antialiased text-gray-900">
@@ -156,7 +155,7 @@
                     class="mt-10 mb-3 text-sm text-black lg:text-base">Get a free consultation</x-button>
             </div>
             <div class="z-30 hidden lg:block">
-                <img src="{{ Vite::asset('resources/images/hero-image.jpg') }}" alt="Hero" class="h-[400px]">
+                <img src="{{ Vite::asset('resources/images/hero-image.webp') }}" alt="Hero" class="h-[400px] lazyload">
             </div>
         </div>
     </header>
@@ -172,7 +171,7 @@
         </h3>
         <div class="grid gap-5 px-5 mt-8 lg:grid-cols-2 md:gap-10">
             <div class="border-[13px] rounded-3xl shadow border-web3nexus relative overflow-clip">
-                <img class="w-full h-full" src="{{ Vite::asset('resources/images/about-us.jpg') }}" alt="About us">
+                <img class="w-full h-full lazyload" src="{{ Vite::asset('resources/images/about-us.webp') }}" alt="About us">
             </div>
             <div class="flex flex-col items-start justify-between gap-4">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Crafting Digital Excellence, One
@@ -397,8 +396,8 @@
         {{-- Unparalleled Expertise --}}
         <div class="grid gap-5 px-5 mt-8 md:grid-cols-2">
             <div>
-                <img class="rounded-xl h-[350px] w-full shadow"
-                    src="{{ Vite::asset('resources/images/wcu-first.jpg') }}" alt="Unparalleled Expertise">
+                <img class="rounded-xl h-[350px] w-full shadow lazyload"
+                    src="{{ Vite::asset('resources/images/wcu-first.webp') }}" alt="Unparalleled Expertise">
             </div>
             <div class="flex flex-col justify-between gap-3">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Unparalleled Expertise</h3>
@@ -414,8 +413,8 @@
         {{-- Tailored Solutions --}}
         <div class="grid flex-row-reverse gap-5 px-5 mt-8 md:flex">
             <div class="md:w-1/2">
-                <img class="rounded-xl h-[300px] w-full shadow object-cover"
-                    src="{{ Vite::asset('resources/images/wcu-second.jpg') }}" alt="Tailored Solutions">
+                <img class="rounded-xl h-[300px] w-full shadow object-cover lazyload"
+                    src="{{ Vite::asset('resources/images/wcu-second.webp') }}" alt="Tailored Solutions">
             </div>
             <div class="flex flex-col justify-between gap-3 md:w-1/2">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Tailored Solutions</h3>
@@ -431,8 +430,8 @@
         {{-- Creative Innovation --}}
         <div class="grid gap-5 px-5 mt-8 md:grid-cols-2">
             <div>
-                <img class="rounded-xl h-[300px] w-full shadow object-cover"
-                    src="{{ Vite::asset('resources/images/wcu-third.jpg') }}" alt="Creative Innovation">
+                <img class="rounded-xl h-[300px] w-full shadow object-cover lazyload"
+                    src="{{ Vite::asset('resources/images/wcu-third.webp') }}" alt="Creative Innovation">
             </div>
             <div class="flex flex-col justify-between gap-3">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Creative Innovation</h3>
@@ -448,8 +447,8 @@
         {{-- Client-Centric Approach --}}
         <div class="grid flex-row-reverse gap-5 px-5 mt-8 md:flex">
             <div class="md:w-1/2">
-                <img class="rounded-xl h-[300px] w-full shadow object-cover"
-                    src="{{ Vite::asset('resources/images/wcu-fourth.jpg') }}" alt="Client-Centric Approach">
+                <img class="rounded-xl h-[300px] w-full shadow object-cover lazyload"
+                    src="{{ Vite::asset('resources/images/wcu-fourth.webp') }}" alt="Client-Centric Approach">
             </div>
             <div class="flex flex-col justify-between gap-3 md:w-1/2">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Client-Centric Approach</h3>
@@ -478,7 +477,7 @@
                 {{-- Portfolio item --}}
                 <a href="{{ $portfolio->url }}" target="_black" rel="noopener"
                     class="p-4 transition-all bg-white border-2 cursor-pointer hover:border-black hover:bg-web3nexus group drop-shadow-xl">
-                    <img class="object-cover w-full h-56 border-2 group-hover:border-black"
+                    <img class="object-cover w-full h-56 border-2 group-hover:border-black lazyload"
                         src="{{ rtrim(env('APP_URL'), '/') . '/storage/' . $portfolio->image }}"
                         alt="{{ $portfolio->title }} Portfolio">
                     <div class="flex items-center justify-between mt-3">
@@ -499,7 +498,7 @@
         </div>
 
         @if ($portfolios->isEmpty())
-            <p class="text-2xl font-bold text-center text-gray-300 md:text-4xl">No items to display.</p>
+            <p class="text-2xl font-bold text-center text-gray-800 md:text-4xl">No items to display.</p>
         @endif
     </section>
 
@@ -563,7 +562,7 @@
             @endforeach
 
             @if ($faqs->isEmpty())
-                <p class="text-2xl font-bold text-center text-gray-300 md:text-4xl">No items to display.</p>
+                <p class="text-2xl font-bold text-center text-gray-800 md:text-4xl">No items to display.</p>
             @endif
         </div>
     </section>
@@ -743,7 +742,7 @@
         </div>
     </a>
 
-    <script>
+    <script type="text/javascript">
         function scrollToSection(sectionId) {
             var targetSection = document.getElementById(sectionId);
 
@@ -778,6 +777,7 @@
     </script>
     @livewire('notifications')
     @filamentScripts
+    <script async src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 
 </html>

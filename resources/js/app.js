@@ -6,6 +6,8 @@ import Typed from 'typed.js';
 
 import.meta.glob(['../images/**', '../fonts/**',]);
 
+import 'lazysizes';
+
 $(document).ready(function () {
     particlesJS.load('particles-js', '/js/particles.json', function() {});
     particlesJS.load('particles-js-f', '/js/particles.json', function() {});
