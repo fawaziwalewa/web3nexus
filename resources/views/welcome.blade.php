@@ -29,12 +29,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Web3Nexus">
     <meta name="twitter:description" content="Elevate your online presence with Web3Nexus! Experts in web & app development for impactful digital experiences. Best web dev 2023">
-    <meta name="twitter:image" content="{{ Vite::asset('resources/images/logo.png') }}">
+    <meta name="twitter:image" content="{{ Vite::asset('resources/images/Logo.png') }}">
 
     <!-- Open Graph/Facebook Meta Tags -->
     <meta property="og:title" content="Web3Nexus">
     <meta property="og:description" content="Elevate your online presence with Web3Nexus! Experts in web & app development for impactful digital experiences. Best web dev 2023">
-    <meta property="og:image" content="{{ Vite::asset('resources/images/logo.png') }}">
+    <meta property="og:image" content="{{ Vite::asset('resources/images/Logo.png') }}">
     <meta property="og:url" content="{{ config('app.name') }}">
     <meta property="og:type" content="website">
 
@@ -42,7 +42,7 @@
     <meta property="og:site_name" content="Web3Nexus">
     <meta property="og:title" content="Web3Nexus">
     <meta property="og:description" content="Elevate your online presence with Web3Nexus! Experts in web & app development for impactful digital experiences. Best web dev 2023">
-    <meta property="og:image" content="{{ Vite::asset('resources/images/logo.png') }}">
+    <meta property="og:image" content="{{ Vite::asset('resources/images/Logo.png') }}">
 
     <!-- Other Meta Tags (if needed) -->
     <meta name="author" content="Web3Nexus">
