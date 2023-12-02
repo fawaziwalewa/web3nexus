@@ -18,18 +18,18 @@
 
     @filamentStyles
 
-    <link rel="shortcut icon" href="{{ Vite::asset('resources/images/favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ Vite::asset('resources/images/favicon.jpg') }}" type="image/x-icon">
 </head>
 
-<body class="relative max-w-screen-xl mx-auto font-sans antialiased text-gray-900">
+<body class="relative mx-auto font-sans antialiased text-gray-900">
     <header class="relative py-3 bg-black lg:py-6 min-h-[400px] md:min-h-[500px]" x-data="{ isFixed: false, dropdownMenu: false }"
         @scroll.window="isFixed = window.scrollY > 60" id="header">
         <div id="particles-js" class="absolute w-full h-full"></div>
         <nav
             :class="[
-                isFixed ? 'max-w-screen-xl mx-auto fixed top-0 w-full z-50 bg-white py-2' : 'relative top-0'
+                isFixed ? 'fixed top-0 w-full z-50 bg-white py-2' : 'relative top-0'
             ]">
-            <div class="flex items-center justify-between px-4 transition-all duration-300 ease-in-out sm:px-6">
+            <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 transition-all duration-300 ease-in-out sm:px-6">
                 <x-application-logo class="h-[60px] z-30" />
                 {{-- Desktop Menu --}}
                 <div class="z-30 items-center hidden lg:flex">
@@ -146,7 +146,7 @@
             </div>
         </nav>
 
-        <div class="flex items-center justify-between px-4 mt-10 sm:px-10">
+        <div class="flex items-center justify-between px-4 mt-10 sm:px-10 max-w-screen-xl mx-auto">
             <div class="z-30 text-white">
                 <p class="text-sm font-semibold">Elevate Your Brand with Creative Excellence</p>
                 <h1 class="max-w-xl text-5xl italic font-bold"><span id="type">We Provide Cutting Edge</span></h1>
@@ -156,13 +156,13 @@
                     class="mt-10 mb-3 text-sm text-black lg:text-base">Get a free consultation</x-button>
             </div>
             <div class="z-30 hidden lg:block">
-                <img src="{{ Vite::asset('resources/images/hero-image.png') }}" alt="Hero" class="h-[400px]">
+                <img src="{{ Vite::asset('resources/images/hero-image.jpg') }}" alt="Hero" class="h-[400px]">
             </div>
         </div>
     </header>
 
     {{-- About Us --}}
-    <section class="mt-12" id="about-us">
+    <section class="max-w-screen-xl mx-auto mt-12" id="about-us">
         <h3 class="text-3xl font-bold leading-none text-center">
             About
             <span
@@ -194,7 +194,7 @@
     </section>
 
     {{-- Our Services --}}
-    <section class="px-5 mt-12" id="our-services">
+    <section class="max-w-screen-xl mx-auto px-5 mt-12" id="our-services">
         <h3 class="text-3xl font-bold leading-none text-center">
             Our
             <span
@@ -385,7 +385,7 @@
     </section>
 
     {{-- Why choose us? --}}
-    <section class="mt-12" id="why-choose-us">
+    <section class="max-w-screen-xl mx-auto mt-12" id="why-choose-us">
         <h3 class="text-3xl font-bold leading-none text-center">
             Why
             <span
@@ -465,7 +465,7 @@
     </section>
 
     {{-- Our Portfolio --}}
-    <section class="mt-12" id="our-portfolio">
+    <section class="max-w-screen-xl mx-auto mt-12" id="our-portfolio">
         <h3 class="text-3xl font-bold leading-none text-center">
             Our
             <span
@@ -504,7 +504,7 @@
     </section>
 
     {{-- Reach Out --}}
-    <section class="mt-12" id="reach-out">
+    <section class="max-w-screen-xl mx-auto mt-12" id="reach-out">
         <h3 class="text-3xl font-bold leading-none text-center">
             Reach
             <span
@@ -516,7 +516,7 @@
     </section>
 
     {{-- Frequently Asked Questions --}}
-    <section class="mt-12" id="faqs">
+    <section class="max-w-screen-xl mx-auto mt-12" id="faqs">
         <h3 class="text-3xl font-bold leading-none text-center">
             Frequently
             <span
