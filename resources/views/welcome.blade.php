@@ -430,7 +430,7 @@
             </div>
             <div class="flex flex-col justify-between gap-3">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Unparalleled Expertise</h3>
-                <h5 class="font-bold">Your Vision, Our Expertise</h5>
+                <h4 class="font-bold">Your Vision, Our Expertise</h4>
                 <p>At Web3Nexus, we bring years of industry experience and technical know-how to the table. Our team of
                     skilled professionals is well-versed in the latest web technologies and design trends.</p>
                 <p>Whether you're looking to create a stunning website, optimize your online presence, or explore the
@@ -447,7 +447,7 @@
             </div>
             <div class="flex flex-col justify-between gap-3 md:w-1/2">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Tailored Solutions</h3>
-                <h5 class="font-bold">Your Needs, Our Solutions</h5>
+                <h4 class="font-bold">Your Needs, Our Solutions</h4>
                 <p>We understand that one size doesn't fit all. That's why we take a personalized approach to every
                     project. Our solutions are tailored to your specific goals and requirements.</p>
                 <p>From custom web development to strategic digital marketing, we craft solutions that resonate with
@@ -464,7 +464,7 @@
             </div>
             <div class="flex flex-col justify-between gap-3">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Creative Innovation</h3>
-                <h5 class="font-bold">Your Imagination, Our Innovation</h5>
+                <h4 class="font-bold">Your Imagination, Our Innovation</h4>
                 <p>Innovation is at the heart of everything we do. We thrive on pushing boundaries and exploring new
                     horizons in web design and development.</p>
                 <p> Our creative team combines cutting-edge design with innovative technology to deliver captivating,
@@ -481,7 +481,7 @@
             </div>
             <div class="flex flex-col justify-between gap-3 md:w-1/2">
                 <h3 class="font-bold text-3xl border-l-[6px] border-web3nexus pl-2">Client-Centric Approach</h3>
-                <h5 class="font-bold">Your Success, Our Priority</h5>
+                <h4 class="font-bold">Your Success, Our Priority</h4>
                 <p>Your success is our ultimate goal. We prioritize open communication, transparency, and collaboration
                     throughout the project lifecycle.</p>
                 <p>Our client-centric approach ensures that your voice is heard, your vision is realized, and your
