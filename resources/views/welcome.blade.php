@@ -10,7 +10,7 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" media="all" />
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -184,7 +184,7 @@
                     class="mt-10 mb-3 text-sm text-black lg:text-base">Get a free consultation</x-button>
             </div>
             <div class="z-30 hidden lg:block">
-                <img src="{{ Vite::asset('resources/images/hero-image.webp') }}" alt="Hero" class="h-[400px] lazyload">
+                <img src="{{ Vite::asset('resources/images/hero-image.webp') }}" alt="Hero" width="100%" height="400px" class="lazyload">
             </div>
         </div>
     </header>
@@ -558,7 +558,7 @@
             @foreach ($faqs as $i => $faq)
                 <div class="px-5 py-2 @if (!$loop->last) border-b border-web3nexus @endif">
                     {{-- Question --}}
-                    <div class="flex items-center justify-between cursor-pointer text-web3nexus"
+                    <div class="flex items-center justify-between cursor-pointer text-[#0C5F2D]"
                         @click="selected !== {{ $i }} ? selected = {{ $i }} : selected = null">
                         <h4 class="text-xl font-semibold">{{ $faq->question }}</h4>
                         {{-- active --}}
