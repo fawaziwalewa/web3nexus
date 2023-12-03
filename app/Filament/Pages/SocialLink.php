@@ -128,7 +128,7 @@ class SocialLink extends Page implements HasForms
             [
                 'name' => 'facebook',
                 'page_handle' => $social_links['facebook_url'],
-                'status' => $social_links['facebook_status']
+                'status' => $social_links['facebook_status'] ? 1 : 0
             ]
         );
 
@@ -138,7 +138,7 @@ class SocialLink extends Page implements HasForms
             [
                 'name' => 'whatsapp',
                 'page_handle' => $social_links['whatsapp_url'],
-                'status' => $social_links['whatsapp_status']
+                'status' => $social_links['whatsapp_status'] ? 1 : 0
             ]
         );
 
@@ -148,7 +148,7 @@ class SocialLink extends Page implements HasForms
             [
                 'name' => 'telegram',
                 'page_handle' => $social_links['telegram_url'],
-                'status' => $social_links['telegram_status']
+                'status' => $social_links['telegram_status'] ? 1 : 0
             ]
         );
 
@@ -158,7 +158,7 @@ class SocialLink extends Page implements HasForms
             [
                 'name' => 'youtube',
                 'page_handle' => $social_links['youtube_url'],
-                'status' => $social_links['youtube_status']
+                'status' => $social_links['youtube_status'] ? 1 : 0
             ]
         );
 
@@ -168,7 +168,7 @@ class SocialLink extends Page implements HasForms
             [
                 'name' => 'tiktok',
                 'page_handle' => $social_links['tiktok_url'],
-                'status' => $social_links['tiktok_status']
+                'status' => $social_links['tiktok_status'] ? 1 : 0
             ]
         );
 
@@ -178,7 +178,7 @@ class SocialLink extends Page implements HasForms
             [
                 'name' => 'twitter',
                 'page_handle' => $social_links['twitter_url'],
-                'status' => $social_links['twitter_status']
+                'status' => $social_links['twitter_status'] ? 1 : 0
             ]
         );
 
