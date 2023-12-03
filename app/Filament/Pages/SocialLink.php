@@ -25,8 +25,8 @@ class SocialLink extends Page implements HasForms
 
         if (!$social_links->isEmpty()) {
             foreach ($social_links as $social_link) {
-                $this->data[$social_link->name.'_url'] = $social_link->page_handle;
-                $this->data[$social_link->name.'_status'] = $social_link->status;
+                $this->data[$social_link->name . '_url'] = $social_link->page_handle;
+                $this->data[$social_link->name . '_status'] = $social_link->status;
             }
             $this->form->fill($this->data);
         }
@@ -123,64 +123,76 @@ class SocialLink extends Page implements HasForms
         $social_links = $this->form->getState();
 
         // Facebook
-        SocialLinkModel::updateOrInsert(
-            ['name' => 'facebook'],
-            [
-                'name' => 'facebook',
-                'page_handle' => $social_links['facebook_url'],
-                'status' => $social_links['facebook_status'] ? 1 : 0
-            ]
-        );
+        if ($social_links['facebook_url']) {
+            SocialLinkModel::updateOrInsert(
+                ['name' => 'facebook'],
+                [
+                    'name' => 'facebook',
+                    'page_handle' => $social_links['facebook_url'],
+                    'status' => $social_links['facebook_status'] ? 1 : 0
+                ]
+            );
+        }
 
         // WhatsApp
-        SocialLinkModel::updateOrInsert(
-            ['name' => 'whatsapp'],
-            [
-                'name' => 'whatsapp',
-                'page_handle' => $social_links['whatsapp_url'],
-                'status' => $social_links['whatsapp_status'] ? 1 : 0
-            ]
-        );
+        if ($social_links['whatsapp_url']) {
+            SocialLinkModel::updateOrInsert(
+                ['name' => 'whatsapp'],
+                [
+                    'name' => 'whatsapp',
+                    'page_handle' => $social_links['whatsapp_url'],
+                    'status' => $social_links['whatsapp_status'] ? 1 : 0
+                ]
+            );
+        }
 
         // Telegram
-        SocialLinkModel::updateOrInsert(
-            ['name' => 'telegram'],
-            [
-                'name' => 'telegram',
-                'page_handle' => $social_links['telegram_url'],
-                'status' => $social_links['telegram_status'] ? 1 : 0
-            ]
-        );
+        if ($social_links['telegram_url']) {
+            SocialLinkModel::updateOrInsert(
+                ['name' => 'telegram'],
+                [
+                    'name' => 'telegram',
+                    'page_handle' => $social_links['telegram_url'],
+                    'status' => $social_links['telegram_status'] ? 1 : 0
+                ]
+            );
+        }
 
         // Youtube
-        SocialLinkModel::updateOrInsert(
-            ['name' => 'youtube'],
-            [
-                'name' => 'youtube',
-                'page_handle' => $social_links['youtube_url'],
-                'status' => $social_links['youtube_status'] ? 1 : 0
-            ]
-        );
+        if ($social_links['youtube_url']) {
+            SocialLinkModel::updateOrInsert(
+                ['name' => 'youtube'],
+                [
+                    'name' => 'youtube',
+                    'page_handle' => $social_links['youtube_url'],
+                    'status' => $social_links['youtube_status'] ? 1 : 0
+                ]
+            );
+        }
 
         // Tiktok
-        SocialLinkModel::updateOrInsert(
-            ['name' => 'tiktok'],
-            [
-                'name' => 'tiktok',
-                'page_handle' => $social_links['tiktok_url'],
-                'status' => $social_links['tiktok_status'] ? 1 : 0
-            ]
-        );
+        if ($social_links['tiktok_url']) {
+            SocialLinkModel::updateOrInsert(
+                ['name' => 'tiktok'],
+                [
+                    'name' => 'tiktok',
+                    'page_handle' => $social_links['tiktok_url'],
+                    'status' => $social_links['tiktok_status'] ? 1 : 0
+                ]
+            );
+        }
 
         // Twitter
-        SocialLinkModel::updateOrInsert(
-            ['name' => 'twitter'],
-            [
-                'name' => 'twitter',
-                'page_handle' => $social_links['twitter_url'],
-                'status' => $social_links['twitter_status'] ? 1 : 0
-            ]
-        );
+        if ($social_links['twitter_url']) {
+            SocialLinkModel::updateOrInsert(
+                ['name' => 'twitter'],
+                [
+                    'name' => 'twitter',
+                    'page_handle' => $social_links['twitter_url'],
+                    'status' => $social_links['twitter_status'] ? 1 : 0
+                ]
+            );
+        }
 
         Notification::make()
             ->title('Saved successfully.')
