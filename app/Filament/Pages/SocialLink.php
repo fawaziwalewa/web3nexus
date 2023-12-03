@@ -206,5 +206,5 @@ class SocialLink extends Page implements HasForms
             Action::make('save')
                 ->submit('save')
         ];
-    }
+    } //
 }
