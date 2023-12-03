@@ -107,6 +107,7 @@
                 {{-- Hamburger --}}
                 <div class="block lg:hidden">
                     <button class="relative group" @click="dropdownMenu = true">
+                        <span class="sr-only">Hamburger</span>
                         <div
                             class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
                             <div class="h-[2px] w-7 transform transition-all duration-300 origin-left"
